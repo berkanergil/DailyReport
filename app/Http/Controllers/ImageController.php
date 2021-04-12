@@ -123,10 +123,10 @@ class ImageController extends Controller
         }
 
         
-        $outputImage->save($outputPath.time().".jpg"); 
+        $outputImage->save($outputPath.$gun."_".$ay."_".$yil.".jpg"); 
 
         $imagemodel= new ImageModel();
-        $imagemodel->filename=time().".jpg";
+        $imagemodel->filename=$gun."_".$ay."_".$yil.".jpg";
         $imagemodel->save();
         $image = ImageModel::latest()->first();
         return view('outputimage', compact('image'));
