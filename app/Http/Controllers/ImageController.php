@@ -79,19 +79,19 @@ class ImageController extends Controller
                 for($i;$i<count($infos);$i++){
                     $outputImage->text($infos[$i][0], 1200, 100+$y, function($font) {
                         $font->file(public_path().'/text/text.ttf');
-                        $font->size(28);
+                        $font->size(25);
                         $font->color('#ffffff');
                         $font->valign('top');
                     });
         
                     $outputImage->text($infos[$i][1], 1810, 105+$y, function($font) {
                         $font->file(public_path().'/text/text.ttf');
-                        $font->size(26);
+                        $font->size(24);
                         $font->color('#ffffff');
                         $font->align('right');
                         $font->valign('top');
                     });
-                    $y+=41;
+                    $y+=31.5;
                 }
                 break;
             }
@@ -106,20 +106,20 @@ class ImageController extends Controller
             }
             $outputImage->text($infos[$i][0], 520, 100+$y, function($font) {
                 $font->file(public_path().'/text/text.ttf');
-                $font->size(28);
+                $font->size(25);
                 $font->color('#ffffff');
                 $font->valign('top');
             });
 
             $outputImage->text($infos[$i][1], 1130, 105+$y, function($font) {
                 $font->file(public_path().'/text/text.ttf');
-                $font->size(26);
+                $font->size(24);
                 $font->color('#ffffff');
                 $font->align('right');
                 $font->valign('top');
             });
 
-            $y+=41;
+            $y+=31.5;
         }
 
         
