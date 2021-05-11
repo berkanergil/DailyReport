@@ -120,22 +120,6 @@ class ImageController extends Controller
             $font->valign('center');
         });
 
-       /*  $outputImage->text($mayıs, 225, 820, function($font) {
-            $font->file(public_path().'/text/text.ttf');
-            $font->size(150);
-            $font->color('#000000');
-            $font->align('center');
-            $font->valign('top');
-        });
-
-        $outputImage->text($mayıs_be, 225, 900, function($font) {
-            $font->file(public_path().'/text/text.ttf');
-            $font->size(150);
-            $font->color('#000000');
-            $font->align('center');
-            $font->valign('top');
-        }); */
-
         $y=0;
         $i=8;
 
