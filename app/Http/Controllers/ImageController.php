@@ -26,12 +26,19 @@ class ImageController extends Controller
         $gun=$infos[1][1];
         $ay=$infos[2][1];
         $yil=$infos[3][1];
+        $header2=$infos[4][1];
+        $nisan=$infos[5][0];
+        $mayıs=$infos[6][0];
+        $mayıs_be=$infos[7][0];
+        $nisan_value=$infos[5][1];
+        $mayıs_value=$infos[6][1];
+        $mayıs_be_value=$infos[7][1];
 
-        $originalImage= Image::make(public_path().'/image/template8.jpg');
+        $originalImage= Image::make(public_path().'/image/template9.jpg');
         $outputImage = Image::make($originalImage);
         $outputPath = public_path().'/output_images/';
         
-        $outputImage->text($header, 250, 340, function($font) {
+        $outputImage->text($header, 250, 300, function($font) {
             $font->file(public_path().'/text/text.ttf');
             $font->size(75);
             $font->color('#000000');
@@ -39,7 +46,7 @@ class ImageController extends Controller
             $font->valign('top');
         });
 
-        $outputImage->text($gun, 240, 460, function($font) {
+        $outputImage->text($gun, 240, 420, function($font) {
             $font->file(public_path().'/text/text.ttf');
             $font->size(200);
             $font->color('#000000');
@@ -47,7 +54,7 @@ class ImageController extends Controller
             $font->valign('top');
         });
 
-        $outputImage->text($ay, 225, 620, function($font) {
+        $outputImage->text($ay, 235, 580, function($font) {
             $font->file(public_path().'/text/text.ttf');
             $font->size(70);
             $font->color('#000000');
@@ -55,7 +62,7 @@ class ImageController extends Controller
             $font->valign('top');
         });
 
-        $outputImage->text($yil, 225, 700, function($font) {
+        $outputImage->text($yil, 235, 660, function($font) {
             $font->file(public_path().'/text/text.ttf');
             $font->size(150);
             $font->color('#000000');
@@ -63,8 +70,74 @@ class ImageController extends Controller
             $font->valign('top');
         });
 
+        $outputImage->text($header2,240, 820, function($font) {
+            $font->file(public_path().'/text/text.ttf');
+            $font->size(50);
+            $font->color('#000000');
+            $font->align('center');
+            $font->valign('top');
+        });
+
+        $outputImage->text($nisan, 100, 900, function($font) {
+            $font->file(public_path().'/text/text.ttf');
+            $font->size(30);
+            $font->color('#ffffff');
+            $font->valign('center');
+        });
+
+        $outputImage->text($mayıs, 100, 960, function($font) {
+            $font->file(public_path().'/text/text.ttf');
+            $font->size(30);
+            $font->color('#ffffff');
+            $font->valign('center');
+        });
+
+        $outputImage->text($mayıs_be, 100, 1020, function($font) {
+            $font->file(public_path().'/text/text.ttf');
+            $font->size(30);
+            $font->color('#ffffff');
+            $font->valign('center');
+        });
+
+        $outputImage->text($nisan_value, 360, 900, function($font) {
+            $font->file(public_path().'/text/text.ttf');
+            $font->size(30);
+            $font->color('#ffffff');
+            $font->valign('center');
+        });
+
+        $outputImage->text($mayıs_value, 360, 960, function($font) {
+            $font->file(public_path().'/text/text.ttf');
+            $font->size(30);
+            $font->color('#ffffff');
+            $font->valign('center');
+        });
+
+        $outputImage->text($mayıs_be_value, 360, 1020, function($font) {
+            $font->file(public_path().'/text/text.ttf');
+            $font->size(30);
+            $font->color('#ffffff');
+            $font->valign('center');
+        });
+
+       /*  $outputImage->text($mayıs, 225, 820, function($font) {
+            $font->file(public_path().'/text/text.ttf');
+            $font->size(150);
+            $font->color('#000000');
+            $font->align('center');
+            $font->valign('top');
+        });
+
+        $outputImage->text($mayıs_be, 225, 900, function($font) {
+            $font->file(public_path().'/text/text.ttf');
+            $font->size(150);
+            $font->color('#000000');
+            $font->align('center');
+            $font->valign('top');
+        }); */
+
         $y=0;
-        $i=4;
+        $i=8;
 
         for($i;$i<count($infos);$i++){
             if($infos[$i][0]=="TITLE2"){
